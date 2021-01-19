@@ -34,7 +34,7 @@ From Wikipedia:
 
 # Getting started 
 
-## First screen
+## Root/Today screen
 
 ![first-screen](img/first-screen.png)
 
@@ -52,50 +52,22 @@ From Wikipedia:
 ![hamburger-menu](img/hamburger-menu.png)
 
 
-## Click GRAPH 
-
-![click-graph](img/click-graph.png)
-
-
-## GRAPH 
+## Graph screen 
 
 ![graph](img/graph.png)
 
-## Click MONTH 
-
-![click-month](img/click-month.png)
-
-
-## MONTH 
+## Month screen 
 
 ![month](img/month.png)
 
-## MONTH click  date
-
-![month-click-date](img/month-click-date.png)
-
-## YEAR click date 
-
-![click-date](img/click-date.png)
-
-
-## Date/day 
+## Day screen
 
 ![date](img/date.png)
 
-## YEAR Click  TODAY 
 
-![click-today](img/click-today.png)
+## Today screen 
 
-
-## TODAY 
-
-![day](img/day.png)
-
-
-
-
-
+![today](img/today.png)
 
 
 # Live Demo
