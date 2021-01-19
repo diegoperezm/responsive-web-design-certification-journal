@@ -1,0 +1,41 @@
+/* header css */
+.inactive {
+    color: white;
+}
+
+.active-b {
+    font-weight: 900;
+    color: yellow ;
+}
+
+
+a  {
+    text-decoration: none !important;
+    padding-right:   1rem;
+}
+
+a:hover  {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+/* year css */
+a.inactive {
+    color: black; 
+}
+
+a.active-b {
+    color: red;
+}
+
+a:hover {
+    color: gray!important;
+}
+
+span {
+    color: lightgrey;
+}
+
+.commentBox::placeholder { 
+    color: lightgrey !important; 
+}
