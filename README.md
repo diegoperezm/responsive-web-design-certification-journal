@@ -32,6 +32,72 @@ From Wikipedia:
 - gh-pages
 
 
+# Getting started 
+
+## First screen
+
+![first-screen](img/first-screen.png)
+
+
+## Select a project 
+
+![select-project](img/select-project.png)
+
+## Set Start and End field (hh:mm):
+
+![start-end](img/start-end.png)
+
+## Click hamburger/menu
+
+![hamburger-menu](img/hamburger-menu.png)
+
+
+## Click GRAPH 
+
+![click-graph](img/click-graph.png)
+
+
+## GRAPH 
+
+![graph](img/graph.png)
+
+## Click MONTH 
+
+![click-month](img/click-month.png)
+
+
+## MONTH 
+
+![month](img/month.png)
+
+## MONTH click  date
+
+![month-click-date](img/month-click-date.png)
+
+## YEAR click date 
+
+![click-date](img/click-date.png)
+
+
+## Date/day 
+
+![date](img/date.png)
+
+## YEAR Click  TODAY 
+
+![click-today](img/click-today.png)
+
+
+## TODAY 
+
+![day](img/day.png)
+
+
+
+
+
+
+
 # Live Demo
 
 [DEMO](https://diegoperezm.github.io/responsive-web-design-certification-journal/)
