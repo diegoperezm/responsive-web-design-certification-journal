@@ -56,6 +56,10 @@ From Wikipedia:
 
 ![graph](img/graph.png)
 
+## Year screen 
+
+![year](img/year.png)
+
 ## Month screen 
 
 ![month](img/month.png)
