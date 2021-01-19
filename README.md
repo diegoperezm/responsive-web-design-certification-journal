@@ -12,4 +12,4 @@ This project was bootstrapped with
 
 # Live Demo
 
-[DEMO](https://diegoperezm.github.io/responsive-web-design-certification-journal/#/today)
+[DEMO](https://diegoperezm.github.io/responsive-web-design-certification-journal/)
