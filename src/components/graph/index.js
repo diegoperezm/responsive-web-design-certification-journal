@@ -1,4 +1,5 @@
-import   React from 'react';
+import   React           from 'react';
+import { Col, Row}       from 'react-bootstrap';
 import { Bar, defaults } from 'react-chartjs-2';
 import { dataChartjs   } from '../../consts/';
 import { getDataGraph  } from '../../helpers/';
@@ -10,7 +11,8 @@ export default function Graph(props) {
     let data     = getDataGraph(dataChartjs, dataYear ); 
 
     return (
-      <div>
+  <Row>
+      <Col>
         <Bar
           data={data}
             options={{
@@ -31,6 +33,7 @@ export default function Graph(props) {
                 }
             }}
         />
-      </div>
+      </Col>
+  </Row>
     );
 };

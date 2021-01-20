@@ -110,7 +110,7 @@ export default function App() {
       <div className="App">
         <Router>
           <Header />
-            <Container fluid>
+            <Container>
                 <h1 className="mt-5 mb-5"><u>Responsive Web Design Certification:</u></h1> 
              <Row>
                 <Col>
