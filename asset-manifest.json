@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/responsive-web-design-certification-journal/static/css/main.6dacbe4a.chunk.css",
-    "main.js": "/responsive-web-design-certification-journal/static/js/main.cdb4e21b.chunk.js",
-    "main.js.map": "/responsive-web-design-certification-journal/static/js/main.cdb4e21b.chunk.js.map",
+    "main.css": "/responsive-web-design-certification-journal/static/css/main.bdeee075.chunk.css",
+    "main.js": "/responsive-web-design-certification-journal/static/js/main.5eb648d6.chunk.js",
+    "main.js.map": "/responsive-web-design-certification-journal/static/js/main.5eb648d6.chunk.js.map",
     "runtime-main.js": "/responsive-web-design-certification-journal/static/js/runtime-main.307c6a08.js",
     "runtime-main.js.map": "/responsive-web-design-certification-journal/static/js/runtime-main.307c6a08.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/responsive-web-design-certification-journal/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.3faf45cf.chunk.js": "/responsive-web-design-certification-journal/static/js/2.3faf45cf.chunk.js",
-    "static/js/2.3faf45cf.chunk.js.map": "/responsive-web-design-certification-journal/static/js/2.3faf45cf.chunk.js.map",
+    "static/js/2.0cbb3f5c.chunk.js": "/responsive-web-design-certification-journal/static/js/2.0cbb3f5c.chunk.js",
+    "static/js/2.0cbb3f5c.chunk.js.map": "/responsive-web-design-certification-journal/static/js/2.0cbb3f5c.chunk.js.map",
     "index.html": "/responsive-web-design-certification-journal/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/responsive-web-design-certification-journal/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.6dacbe4a.chunk.css.map": "/responsive-web-design-certification-journal/static/css/main.6dacbe4a.chunk.css.map",
-    "static/js/2.3faf45cf.chunk.js.LICENSE.txt": "/responsive-web-design-certification-journal/static/js/2.3faf45cf.chunk.js.LICENSE.txt"
+    "static/css/main.bdeee075.chunk.css.map": "/responsive-web-design-certification-journal/static/css/main.bdeee075.chunk.css.map",
+    "static/js/2.0cbb3f5c.chunk.js.LICENSE.txt": "/responsive-web-design-certification-journal/static/js/2.0cbb3f5c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.307c6a08.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.3faf45cf.chunk.js",
-    "static/css/main.6dacbe4a.chunk.css",
-    "static/js/main.cdb4e21b.chunk.js"
+    "static/js/2.0cbb3f5c.chunk.js",
+    "static/css/main.bdeee075.chunk.css",
+    "static/js/main.5eb648d6.chunk.js"
   ]
 }
