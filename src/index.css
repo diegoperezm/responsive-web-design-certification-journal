@@ -89,7 +89,7 @@ table {
 
 .commentBox::placeholder { 
     color: lightgrey !important; 
-    font-size: large;
+    font-size: small;
 }
 
 .comments {
@@ -121,7 +121,7 @@ table {
 
 .commentBox::placeholder { 
     color: lightgrey !important; 
-    font-size: x-large;
+    font-size: large;
 }
 
 .comments {
