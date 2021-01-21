@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/responsive-web-design-certification-journal/static/css/main.6dacbe4a.chunk.css",
-    "main.js": "/responsive-web-design-certification-journal/static/js/main.f1b7adae.chunk.js",
-    "main.js.map": "/responsive-web-design-certification-journal/static/js/main.f1b7adae.chunk.js.map",
+    "main.js": "/responsive-web-design-certification-journal/static/js/main.cdb4e21b.chunk.js",
+    "main.js.map": "/responsive-web-design-certification-journal/static/js/main.cdb4e21b.chunk.js.map",
     "runtime-main.js": "/responsive-web-design-certification-journal/static/js/runtime-main.307c6a08.js",
     "runtime-main.js.map": "/responsive-web-design-certification-journal/static/js/runtime-main.307c6a08.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/responsive-web-design-certification-journal/static/css/2.20aa2d7b.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.3faf45cf.chunk.js",
     "static/css/main.6dacbe4a.chunk.css",
-    "static/js/main.f1b7adae.chunk.js"
+    "static/js/main.cdb4e21b.chunk.js"
   ]
 }
