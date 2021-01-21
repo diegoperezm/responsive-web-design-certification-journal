@@ -8,10 +8,6 @@ import {
 }                         from 'react-bootstrap';
 
 
-
-
-
-
 function MyTr(props) {
     const id            = props.id;
     const handleChange  = props.handleChange; 
@@ -70,12 +66,6 @@ function MyTr(props) {
          </tr>
              );
 }
-
-
-
-
-
-
 
 function MyTable (props) {
     const handleChange = props.handleChange;
@@ -137,7 +127,7 @@ export default function Today(props) {
         <>
         <Row>
           <Col>
-             <h1 className="mb-5">{currentDayName}, {currentMonthName} {currentDayNumber}</h1> 
+             <h2 className="mb-5 currentDate">{currentDayName}, {currentMonthName} {currentDayNumber}</h2> 
          </Col>
             </Row>
             <Row>
@@ -155,11 +145,11 @@ export default function Today(props) {
             </Row>
            <Row>
                 <Col>
-            <h2>Comments: </h2>
+            <h3 className="commentsTitle">Comments: </h3>
             <InputGroup>
                 <FormControl
                     as="textarea"
-                    className="mt-1 commentBox"
+                    className="mt-1 mb-5 commentBox"
                     placeholder="This area is for comments.&#13;To enable <Start> and <End> field: select a <Project> "
                     value={comments}
                     name="comments"

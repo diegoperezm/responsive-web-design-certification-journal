@@ -111,7 +111,7 @@ export default function App() {
         <Router>
           <Header />
             <Container>
-                <h1 className="mt-5 mb-5"><u>Responsive Web Design Certification:</u></h1> 
+                <h1 className="mt-5 mb-5 title"><u>Responsive Web Design Certification:</u></h1> 
              <Row>
                 <Col>
              <Switch>

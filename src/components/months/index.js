@@ -33,7 +33,7 @@ export default function Month(props) {
     const data      =  props.data;
     return (
         <>
-          <h1>{monthName}</h1> 
+          <h2 className="mb-4 currentMonth">{monthName}</h2> 
           <MyTable data={data} />
         </>
     );

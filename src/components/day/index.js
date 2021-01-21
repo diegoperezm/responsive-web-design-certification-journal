@@ -12,7 +12,7 @@ export default function Day (props) {
 
     return (
        <>
-        <h1 className="mt-2 mb-5"><span>{data.currentDayName}, {data.currentMonthName} {data.currentDayNumber}</span></h1> 
+        <h2 className="mb-5 currentDate"><span>{data.currentDayName}, {data.currentMonthName} {data.currentDayNumber}</span></h2> 
          <Table striped bordered hover responsive>
            <thead>
              <tr>
@@ -46,9 +46,9 @@ export default function Day (props) {
          </Table>
            <p className="float-right">Total:{totalHrs}</p>
 
-         <h2>Comments:</h2>
+         <h3 className="mt-5 commentsTitle">Comments:</h3>
          <p
-             className="p-4"
+             className="p-4 comments"
              style={{border: '2px dashed black'}}>
              {data.comments}
          </p>

@@ -5,14 +5,14 @@ import { dataChartjs   } from '../../consts/';
 import { getDataGraph  } from '../../helpers/';
 
 defaults.global.animation = false;
+defaults.global.maintainAspectRatio = false
 
 export default function Graph(props) {
     let dataYear = props.data;
     let data     = getDataGraph(dataChartjs, dataYear ); 
 
     return (
-  <Row>
-      <Col>
+    <div className="mb-5 canvas-container">
         <Bar
           data={data}
             options={{
@@ -33,7 +33,6 @@ export default function Graph(props) {
                 }
             }}
         />
-      </Col>
-  </Row>
+    </div>
     );
 };

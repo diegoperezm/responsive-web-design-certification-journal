@@ -10,27 +10,26 @@ export default function Year (props) {
     const ThisMonth = () => createMonth(month.monthName, month.days);
          return (
             <div key={uuidv4()}>
-           <h2>{month.monthName}</h2>
-           <Table striped bordered hover responsive>
-           <thead>
-             <tr>
-               <th>Monday</th>
-               <th>Tuesday</th>
-               <th>Wednesday</th>
-               <th>Thursday</th>
-               <th>Friday</th>
-               <th>Saturday</th>
-               <th>Sunday</th>
-             </tr>
-           </thead>
-           <tbody>
-             <ThisMonth />
-           </tbody>
-           </Table>
-            </div>
-          );
+              <h2 className="mt-3 currentMonth" >{month.monthName}</h2>
+                <Table striped bordered hover responsive>
+                 <thead>
+                   <tr>
+                     <th>Monday</th>
+                     <th>Tuesday</th>
+                     <th>Wednesday</th>
+                     <th>Thursday</th>
+                     <th>Friday</th>
+                     <th>Saturday</th>
+                     <th>Sunday</th>
+                   </tr>
+                 </thead>
+                <tbody>
+                  <ThisMonth />
+               </tbody>
+             </Table>
+          </div>
+         );
     });
 
     return (<>{arr}</>);
-
 }

@@ -11,6 +11,7 @@
 
 a  {
     text-decoration: none !important;
+    padding-top:     0.1rem;
     padding-right:   1rem;
 }
 
@@ -36,6 +37,100 @@ span {
     color: lightgrey;
 }
 
+.canvas-container {
+    height: 80vh;
+}
+
+.title {
+    font-size: large;
+}
+
+.currentDate {
+    font-size: small;
+}
+
+.currentMonth {
+    font-size: large;
+}
+
+.commentsTitle {
+    font-size: small;
+}
+
 .commentBox::placeholder { 
     color: lightgrey !important; 
+    font-size: small;
 }
+
+.comments {
+    font-size: small;
+}
+
+table {
+    font-size: small;
+}
+
+@media (min-width: 600px ) {
+.title {
+    font-size: large;
+}
+
+.currentDate {
+    font-size: large;
+}
+
+.currentMonth {
+    font-size: large;
+}
+
+.commentsTitle {
+    font-size: large;
+}
+
+.commentBox::placeholder { 
+    color: lightgrey !important; 
+    font-size: large;
+}
+
+.comments {
+    font-size: large;
+}
+
+table {
+    font-size: large;
+}
+
+}
+
+@media (min-width: 800px ) {
+.title {
+    font-size: x-large;
+}
+
+.currentDate {
+    font-size: x-large;
+}
+
+.currentMonth {
+    font-size: x-large;
+}
+
+.commentsTitle {
+    font-size: x-large;
+}
+
+.commentBox::placeholder { 
+    color: lightgrey !important; 
+    font-size: x-large;
+}
+
+.comments {
+    font-size: x-large;
+}
+
+table {
+    font-size: x-large;
+}
+
+}
+
