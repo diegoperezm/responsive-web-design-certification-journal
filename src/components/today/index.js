@@ -59,7 +59,7 @@ function MyTr(props) {
                      value={projectVal}
                      onChange={handleChange}
                  >
-                   <option disabled="true"            value="" >Choose ...</option> 
+                   <option disabled={true}            value="" >Choose ...</option> 
                    <option value="Tribute Page"                >Tribute Page</option>
                    <option value="Survey Form"                 >Survey Form</option>
                    <option value="Product Landing Page"        >Product Landing  Page</option>
