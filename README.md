@@ -10,6 +10,10 @@ This project was bootstrapped with
 
 - This project uses [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
 
+- This  line is for gh-pages (`src/components/header/`):
+
+ ```<Navbar.Brand href={process.env.PUBLIC_URL + '/'} >Journal</Navbar.Brand>```
+
 
 # About the projects
 
