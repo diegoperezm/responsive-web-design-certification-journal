@@ -8,7 +8,7 @@ export default function Header() {
    return (
       <div className="dashboard">
        <Navbar bg="light" variant="light" expand="lg">
-        <Navbar.Brand href="/">Journal</Navbar.Brand>
+           <Navbar.Brand href={process.env.PUBLIC_URL + '/'} >Journal</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
