@@ -1,5 +1,4 @@
 import   React           from 'react';
-import { Col, Row}       from 'react-bootstrap';
 import { Bar, defaults } from 'react-chartjs-2';
 import { dataChartjs   } from '../../consts/';
 import { getDataGraph  } from '../../helpers/';
