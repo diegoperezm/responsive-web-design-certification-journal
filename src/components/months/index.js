@@ -12,13 +12,13 @@ function  MyTable (props) {
         <Table striped bordered hover responsive>
           <thead>
             <tr>
-              <th>Monday</th>
-              <th>Tuesday</th>
-              <th>Wednesday</th>
-              <th>Thursday</th>
-              <th>Friday</th>
-              <th>Saturday</th>
-              <th>Sunday</th>
+              <th>M</th>
+              <th>T</th>
+              <th>W</th>
+              <th>T</th>
+              <th>F</th>
+              <th>S</th>
+              <th>S</th>
             </tr>
           </thead>
           <tbody>
