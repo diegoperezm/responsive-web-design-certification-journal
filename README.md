@@ -42,7 +42,6 @@ From Wikipedia:
 
 ![today](img/today.png)
 
-
 ## Select a project 
 
 ![select-project](img/select-project.png)
@@ -50,7 +49,6 @@ From Wikipedia:
 ## Set Start and End field (hh:mm):
 
 ![start-end](img/start-end.png)
-
 
 ## Graph screen 
 
@@ -66,8 +64,7 @@ From Wikipedia:
 
 ## Day screen
 
-![date](img/date.png)
-
+![date](img/day.png)
 
 ## Today screen 
 
