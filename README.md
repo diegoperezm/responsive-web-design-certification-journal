@@ -40,7 +40,7 @@ From Wikipedia:
 
 ## Root/Today screen
 
-![first-screen](img/first-screen.png)
+![today](img/today.png)
 
 
 ## Select a project 
@@ -50,10 +50,6 @@ From Wikipedia:
 ## Set Start and End field (hh:mm):
 
 ![start-end](img/start-end.png)
-
-## Click hamburger/menu
-
-![hamburger-menu](img/hamburger-menu.png)
 
 
 ## Graph screen 
