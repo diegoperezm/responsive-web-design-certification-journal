@@ -12,7 +12,7 @@ export default function Day (props) {
 
     return (
        <>
-        <h2 className="mb-5 currentDate"><span>{data.currentDayName}, {data.currentMonthName} {data.currentDayNumber}</span></h2> 
+        <h2 className="mb-5 currentDate">{data.currentDayName}, {data.currentMonthName} {data.currentDayNumber}</h2> 
          <Table striped bordered hover responsive>
            <thead>
              <tr>
