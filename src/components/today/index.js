@@ -21,50 +21,42 @@ function MyTr(props) {
     return (
         <tr id={id}>
              <td>
-                 <Row>
-                     <Col>
-                         <Form.Control
-                             type="text"
-                             disabled={projectVal === "" ? true : false }
-                             onChange={handleChange}
-                             name={startName} 
-                             value={startVal}
-                             placeholder="hh:mm"
-                         />
-                   </Col>
-                 </Row>
-             </td> 
-             <td>
-                 <Row>
-                     <Col>
-                         <Form.Control
-                             type="text"
-                             disabled={projectVal === "" ? true : false }
-                             name={endName}
-                             value={endVal}
-                             onChange={handleChange }
-                             placeholder="hh:mm"
-                         />
-                      </Col>
-                 </Row>
-             </td> 
-             <td>
                  <Form.Control
                      as="select"
                      name={projectName}
                      value={projectVal}
                      onChange={handleChange}
                  >
-                   <option disabled={true}            value="" >Choose ...</option> 
-                   <option value="Tribute Page"                >Tribute Page</option>
-                   <option value="Survey Form"                 >Survey Form</option>
-                   <option value="Product Landing Page"        >Product Landing  Page</option>
-                   <option value="Technical Documentation Page">Technical Documentation  Page</option>
-                   <option value="Personal Portfolio Webpage"  >Personal Portfolio Webpage</option>
-               </Form.Control>
-           </td> 
+                     <option disabled={true}            value="" >Choose ...</option> 
+                     <option value="Tribute Page"                >Tribute Page</option>
+                     <option value="Survey Form"                 >Survey Form</option>
+                     <option value="Product Landing Page"        >Product Landing  Page</option>
+                     <option value="Technical Documentation Page">Technical Documentation  Page</option>
+                     <option value="Personal Portfolio Webpage"  >Personal Portfolio Webpage</option>
+                 </Form.Control>
+             </td> 
+             <td>
+                <Form.Control
+                    type="text"
+                    disabled={projectVal === "" ? true : false }
+                    name={startName} 
+                    value={startVal}
+                    onChange={handleChange }
+                    placeholder="hh:mm"
+                />
+             </td> 
+             <td>
+                 <Form.Control
+                     type="text"
+                     disabled={projectVal === "" ? true : false }
+                     onChange={handleChange}
+                     name={endName}
+                     value={endVal}
+                     placeholder="hh:mm"
+                 />
+             </td> 
          </tr>
-             );
+      );
 }
 
 function MyTable (props) {
@@ -76,9 +68,9 @@ function MyTable (props) {
            <Table  bordered hover responsive>
              <thead>
                <tr>
+                 <th>Project</th>
                  <th>Start</th>
                  <th>End</th>
-                 <th>Project</th>
                </tr>
              </thead>
              <tbody>
@@ -126,28 +118,28 @@ export default function Today(props) {
    return (
         <>
         <Row>
-          <Col>
+           <Col>
              <h2 className="mb-5 currentDate">{currentDayName}, {currentMonthName} {currentDayNumber}</h2> 
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+              <MyTable
+                handleChange={handleChange}
+                data={data}
+                />
+          </Col>
+       </Row>
+       <Row>
+         <Col>
+             <p className="float-right primary">Total: {totalHrs}</p>
          </Col>
-            </Row>
-            <Row>
-               <Col>
-                   <MyTable
-                     handleChange={handleChange}
-                     data={data}
-                     />
-               </Col>
-            </Row>
-            <Row>
-               <Col>
-                   <p className="float-right primary">Total: {totalHrs}</p>
-               </Col>
-            </Row>
-           <Row>
-                <Col>
-            <h3 className="commentsTitle">Comments: </h3>
-            <InputGroup>
-                <FormControl
+       </Row>
+       <Row>
+         <Col>
+           <h3 className="commentsTitle">Comments: </h3>
+              <InputGroup>
+                  <FormControl
                     as="textarea"
                     className="mt-1 mb-5 commentBox"
                     placeholder="This area is for comments.&#13;To enable <Start> and <End> field: select a <Project> "
@@ -156,8 +148,8 @@ export default function Today(props) {
                     onChange={handleChange}
                 />
               </InputGroup>
-               </Col>
-            </Row>
+        </Col>
+      </Row>
         </>
     );
 }
