@@ -5,8 +5,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-import React                     from 'react';
-import { useEffect, useState }   from 'react';
+import   React    from 'react';
+import { useEffect, useState,  useCallback }   from 'react';
+import   produce  from 'immer';
 
 import {
     Container,
@@ -57,7 +58,7 @@ export default function App() {
       localStorage.setItem('rwdc2021', JSON.stringify(data))
    }, [data]); 
 
-    const handleChange = evt => {
+    const handleChange = useCallback( evt => {
         const value             = evt.target.value
         const name              = evt.target.name;
         const currentMonthDays  = data.year[currentMonthNumber].days;
@@ -65,46 +66,29 @@ export default function App() {
         const dayTotalTime      = getDayTotalTime(data.today, name, value);  
         const monthTotalTime    = getMonthTotalTime(currentMonthDays, currentDayNumber, dayTotalTime);
 
-
-// change this: object references  modify original array  
-        const tempArr           = data.year.map( month => month );
-
-        let currentDayIndex = tempArr[currentMonthNumber]
+        let currentDayIndex = data.year[currentMonthNumber]
                                  .days.map(day=>day.dayNumber)
                                  .indexOf(parseInt(currentDayNumber));
 
-        // YEAR DAY totalTime
-        tempArr[currentMonthNumber]
-            .days[currentDayIndex]
-            .totalTime               = dayTotalTime; 
+        setData(produce((draft) => {
 
-        // YEAR MONTH totalTime 
-        tempArr[currentMonthNumber]
-            .totalTime               = monthTotalTime; 
-       
-        setData({
-            ...data,
-            today: {
-                ...data.today,
-                [evt.target.name]: value,
-                totalHrs: { hours: todayTotal.hours, minutes: todayTotal.minutes} 
-            },
-            day: {
-                ...data.day,
-                [currentMonthName]: {
-                       ...data.day[currentMonthName],
-                    [currentDayNumber]: {
-                        ...data.today,
-                      [evt.target.name]: value, 
-                      totalHrs: { hours: todayTotal.hours, minutes: todayTotal.minutes}  
-                    }
-                }
-            }, 
+            draft.day[currentMonthName][currentDayNumber][evt.target.name] = value;
+            draft.day[currentMonthName][currentDayNumber].totalHrs =  {
+                hours: todayTotal.hours,
+                minutes: todayTotal.minutes
+            }
 
-// change this: object references  modify original array 
-            year: [...tempArr]
-        });
-    }; 
+            draft.today[evt.target.name] = value;
+            draft.today.totalHrs =  {
+                hours: todayTotal.hours,
+                minutes: todayTotal.minutes
+            }
+
+            draft.year[currentMonthNumber].days[currentDayIndex].totalTime = dayTotalTime;
+            draft.year[currentMonthNumber].totalTime = monthTotalTime;
+        }))
+
+    }, [data, currentMonthNumber]);
 
   return (
       <div className="App">
