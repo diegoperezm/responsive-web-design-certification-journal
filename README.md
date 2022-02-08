@@ -34,6 +34,7 @@ From Wikipedia:
 - react-router-dom
 - uuid
 - gh-pages
+- immer
 
 
 # Getting started 
