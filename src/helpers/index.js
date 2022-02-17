@@ -527,8 +527,6 @@ function createLink(month, dayNumber) {
  * @returns {object} updated datasets and labels
  */
 function getDataGraph(dataChartjs, dataYear) {
-  console.log(typeof dataChartjs, Array.isArray(dataChartjs), dataChartjs);
-  console.log(typeof dataYear, Array.isArray(dataYear), dataYear);
   let arrT = dataYear.map((month) => month.totalTime);
   let arrTr = [];
   let arrSur = [];
@@ -573,7 +571,6 @@ function getDataGraph(dataChartjs, dataYear) {
   dataChartjs.datasets[3].data = arrTech;
   dataChartjs.datasets[4].data = arrPer;
 
-  console.log(typeof dataChartjs, Array.isArray(dataChartjs), dataChartjs);
   return dataChartjs;
 }
 
