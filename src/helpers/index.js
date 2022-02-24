@@ -439,7 +439,13 @@ function getMonthNumberFromName(monthName) {
  * @returns {number} - 28 ? new date returns a number??
  */
 function getDaysInMonth(year, month) {
-  return new Date(year, month, 0).getDate();
+  /*
+https://stackoverflow.com/questions/1184334/get-number-days-in-a-specified-month-using-javascript
+Allan Wintersieck:
+When you pass a 0 to the third argument instead, it uses the last day of the previous month.
+the month has to start with 1 instead of 0 as is normal with Javascript dates, because it's actually switching to the previous month because the day number is 0
+*/
+  return new Date(year, month + 1, 0).getDate();
 }
 
 /**
