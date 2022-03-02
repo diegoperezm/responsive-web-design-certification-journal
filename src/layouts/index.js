@@ -106,7 +106,7 @@ export default function App() {
                   <Today data={data.today} handleChange={handleChange} />
                </Route>
                <Route exact path={`/${currentMonthName}`}>
-                  <Month data={data.year[currentMonthNumber] } />
+                  <Month dataMonth={data.year[currentMonthNumber] } />
                </Route>
                 <Route exact path="/year">
                   <Year data={data.year}  />

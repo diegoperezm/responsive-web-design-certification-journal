@@ -2,9 +2,9 @@ import   React          from 'react';
 import { Table       }  from 'react-bootstrap';
 import { createMonth }  from '../../helpers/';
 
-function  MyTable (props) {
-    const monthName  = props.data.monthName;
-    const days       = props.data.days
+function  MyTable ({dataMonth}) {
+    const monthName  = dataMonth.monthName;
+    const days       = dataMonth.days
 
     const ThisMonth  = () => createMonth(monthName, days);
 
@@ -28,13 +28,13 @@ function  MyTable (props) {
       );
 } 
 
-export default function Month(props) {
-    const monthName =  props.data.monthName;
-    const data      =  props.data;
+export default function Month({dataMonth}) {
+    const monthName =  dataMonth.monthName;
+    const data      =  dataMonth;
     return (
         <>
           <h2 className="mb-4 currentMonth">{monthName}</h2> 
-          <MyTable data={data} />
+          <MyTable dataMonth={data} />
         </>
     );
 }
