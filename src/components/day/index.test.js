@@ -37,7 +37,7 @@ describe("Component: Day", () => {
 	test("renders Day component: Sunday, January 17", () => {
     render(
       <MemoryRouter initialEntries={[{ pathname: "/day/January/17" }]}>
-        <Day data={data.day} />
+        <Day dataDay={data.day} />
       </MemoryRouter>
     );
 

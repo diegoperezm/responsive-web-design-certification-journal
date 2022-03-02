@@ -115,7 +115,7 @@ export default function App() {
                  <Graph  data={data.year}/>
                </Route>
                <Route path="/day/">
-                  <Day data={data.day} />
+                  <Day dataDay={data.day} />
                </Route>
              </Switch>
              </Col>

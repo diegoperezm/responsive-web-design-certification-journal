@@ -1,11 +1,11 @@
 import { useLocation } from 'react-router-dom';
 import { Table       } from 'react-bootstrap';
 
-export default function Day (props) {
+export default function Day ({dataDay}) {
 
     const location = useLocation(); 
     const dayId    = location.pathname.split('/'); // ["","day", ":month", ":dayNumber" ]
-    const data     = props.data[dayId[2]][dayId[3]];
+    const data     = dataDay[dayId[2]][dayId[3]];
     const hours    = data.totalHrs.hours   === undefined ? 0 : data.totalHrs.hours; 
     const minutes  = data.totalHrs.minutes === undefined ? 0 : data.totalHrs.minutes; 
     const totalHrs = `${hours} hours,  ${minutes} minutes`;
