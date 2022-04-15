@@ -105,7 +105,7 @@ export default function App() {
                   <Month dataMonth={data.year[currentMonthNumber]} />
                 </Route>
                 <Route exact path="/year">
-                  <Year data={data.year} />
+                  <Year dataYear={data.year} />
                 </Route>
                 <Route path="/graph">
                   <Graph dataYear={data.year} />
