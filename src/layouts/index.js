@@ -96,10 +96,10 @@ export default function App() {
             <Col>
               <Switch>
                 <Route exact path="/">
-                  <Today data={data.today} handleChange={handleChange} />
+                  <Today dataToday={data.today} handleChange={handleChange} />
                 </Route>
                 <Route exact path="/today">
-                  <Today data={data.today} handleChange={handleChange} />
+                  <Today dataToday={data.today} handleChange={handleChange} />
                 </Route>
                 <Route exact path={`/${currentMonthName}`}>
                   <Month dataMonth={data.year[currentMonthNumber]} />
