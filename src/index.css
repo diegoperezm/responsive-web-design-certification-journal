@@ -1,132 +1,135 @@
 /* header css */
 .inactive {
-    color: white;
+  color: white;
 }
 
 .active-b {
-    font-weight: 900;
-    color: yellow ;
+  font-weight: 900;
+  color: yellow;
 }
 
-
-a  {
-    text-decoration: none !important;
-    padding-top:     0.1rem;
-    padding-right:   1rem;
+a {
+  text-decoration: none !important;
+  padding-top: 0.1rem;
+  padding-right: 1rem;
 }
 
-a:hover  {
+a:hover {
   text-decoration: none !important;
   color: white !important;
 }
 
 /* year css */
 a.inactive {
-    color: black; 
+  color: black;
 }
 
 a.active-b {
-    color: red;
+  color: red;
 }
 
 a:hover {
-    color: gray!important;
+  color: gray !important;
 }
 
 .canvas-container {
-    height: 80vh;
+  height: 80vh;
 }
 
 .title {
-    font-size: large;
+  font-size: large;
 }
 
 .currentDate {
-    font-size: small;
+  font-size: small;
 }
 
 .currentMonth {
-    font-size: large;
+  font-size: large;
 }
 
 .commentsTitle {
-    font-size: small;
+  font-size: small;
 }
 
-.commentBox::placeholder { 
-    color: lightgrey !important; 
-    font-size: small;
-}
-
-.comments {
-    font-size: small;
-}
-
-table {
-    font-size: small;
-}
-
-@media (min-width: 600px ) {
-.title {
-    font-size: large;
-}
-
-.currentDate {
-    font-size: large;
-}
-
-.currentMonth {
-    font-size: large;
-}
-
-.commentsTitle {
-    font-size: large;
-}
-
-.commentBox::placeholder { 
-    color: lightgrey !important; 
-    font-size: small;
+.commentBox::placeholder {
+  color: lightgrey !important;
+  font-size: small;
 }
 
 .comments {
+  font-size: small;
+}
+
+table {
+  table-layout: fixed;
+  font-size: small;
+}
+
+td {
+  padding: 0 !important;
+  height: 1.5em !important;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .title {
+    font-size: large;
+  }
+
+  .currentDate {
+    font-size: large;
+  }
+
+  .currentMonth {
+    font-size: large;
+  }
+
+  .commentsTitle {
+    font-size: large;
+  }
+
+  .commentBox::placeholder {
+    color: lightgrey !important;
     font-size: small;
-}
+  }
 
-table {
+  .comments {
+    font-size: small;
+  }
+
+  table {
     font-size: large;
+  }
 }
 
-}
-
-@media (min-width: 800px ) {
-.title {
+@media (min-width: 800px) {
+  .title {
     font-size: x-large;
-}
+  }
 
-.currentDate {
+  .currentDate {
     font-size: x-large;
-}
+  }
 
-.currentMonth {
+  .currentMonth {
     font-size: x-large;
-}
+  }
 
-.commentsTitle {
+  .commentsTitle {
     font-size: x-large;
-}
+  }
 
-.commentBox::placeholder { 
-    color: lightgrey !important; 
+  .commentBox::placeholder {
+    color: lightgrey !important;
     font-size: large;
-}
+  }
 
-.comments {
+  .comments {
     font-size: large;
-}
+  }
 
-table {
+  table {
     font-size: x-large;
+  }
 }
-
-}
-
