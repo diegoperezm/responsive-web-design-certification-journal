@@ -26,8 +26,10 @@ describe("Component: Today", () => {
     },
   };
 
+  const handleChange = () => {};
+
   test("renders Today component", () => {
-    render(<Today dataToday={dataToday} />);
+    render(<Today dataToday={dataToday} handleChange={handleChange} />);
 
     expect(
       screen.getByRole("heading", { level: 2, name: "," })
