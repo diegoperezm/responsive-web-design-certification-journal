@@ -58,7 +58,7 @@ export default function App() {
 
       let currentDayIndex = data.year[currentMonthNumber].days
         .map((day) => day.dayNumber)
-        .indexOf(parseInt(currentDayNumber));
+        .indexOf(parseInt(currentDayNumber, 10));
 
       setData(
         produce((draft) => {
