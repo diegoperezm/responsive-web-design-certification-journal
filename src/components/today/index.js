@@ -42,7 +42,7 @@ function MyTr(props) {
       </td>
       <td>
         <Form.Control
-          type="text"
+          type="time"
           disabled={projectVal === "" ? true : false}
           name={startName}
           value={startVal}
@@ -52,7 +52,7 @@ function MyTr(props) {
       </td>
       <td>
         <Form.Control
-          type="text"
+          type="time"
           disabled={projectVal === "" ? true : false}
           onChange={handleChange}
           name={endName}
