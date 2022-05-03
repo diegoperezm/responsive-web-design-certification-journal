@@ -60,26 +60,167 @@ export default function App() {
         .map((day) => day.dayNumber)
         .indexOf(parseInt(currentDayNumber, 10));
 
-      setData(
-        produce((draft) => {
-          draft.day[currentMonthName][currentDayNumber][evt.target.name] =
-            value;
-          draft.day[currentMonthName][currentDayNumber].totalHrs = {
-            hours: todayTotal.hours,
-            minutes: todayTotal.minutes,
-          };
+      const projects = [
+        "project1",
+        "project2",
+        "project3",
+        "project4",
+      ].includes(name);
 
-          draft.today[evt.target.name] = value;
-          draft.today.totalHrs = {
-            hours: todayTotal.hours,
-            minutes: todayTotal.minutes,
-          };
+      // "" or  hh:mm
+      const timeSlots = [
+        "start1",
+        "start2",
+        "start3",
+        "start4",
+        "end1",
+        "end2",
+        "end3",
+        "end4",
+      ].includes(name);
 
-          draft.year[currentMonthNumber].days[currentDayIndex].totalTime =
-            dayTotalTime;
-          draft.year[currentMonthNumber].totalTime = monthTotalTime;
-        })
-      );
+      if (name === "comments") {
+        setData(
+          produce((draft) => {
+            draft.day[currentMonthName][currentDayNumber][name] = value;
+            draft.today[name] = value;
+          })
+        );
+      }
+
+      if (projects) {
+        setData(
+          produce((draft) => {
+            draft.day[currentMonthName][currentDayNumber][name] = value;
+            draft.today[name] = value;
+
+            draft.day[currentMonthName][currentDayNumber].totalHrs = {
+              hours: todayTotal.hours,
+              minutes: todayTotal.minutes,
+            };
+            draft.today.totalHrs = {
+              hours: todayTotal.hours,
+              minutes: todayTotal.minutes,
+            };
+            draft.year[currentMonthNumber].days[currentDayIndex].totalTime =
+              dayTotalTime;
+            draft.year[currentMonthNumber].totalTime = monthTotalTime;
+          })
+        );
+      }
+
+      // "" or  hh:mm
+      if (timeSlots) {
+        // ""
+        if (value.length === 0) {
+          setData(
+            produce((draft) => {
+              draft.day[currentMonthName][currentDayNumber][name] = value;
+              draft.today[name] = value;
+
+              draft.day[currentMonthName][currentDayNumber].totalHrs = {
+                hours: todayTotal.hours,
+                minutes: todayTotal.minutes,
+              };
+              draft.today.totalHrs = {
+                hours: todayTotal.hours,
+                minutes: todayTotal.minutes,
+              };
+              draft.year[currentMonthNumber].days[currentDayIndex].totalTime =
+                dayTotalTime;
+              draft.year[currentMonthNumber].totalTime = monthTotalTime;
+            })
+          );
+        }
+
+        // h
+        if (value.length === 1 && /[012]/.test(value)) {
+          setData(
+            produce((draft) => {
+              draft.day[currentMonthName][currentDayNumber][name] = value;
+              draft.today[name] = value;
+            })
+          );
+        }
+
+        // hh
+        if (value.length === 2) {
+          if (/[01]/.test(value[0]) === true && /[0-9]/.test(value[1])) {
+            setData(
+              produce((draft) => {
+                draft.day[currentMonthName][currentDayNumber][name] = value;
+                draft.today[name] = value;
+              })
+            );
+          }
+          if (/2/.test(value[0]) === true && /[0-3]/.test(value[1])) {
+            setData(
+              produce((draft) => {
+                draft.day[currentMonthName][currentDayNumber][name] = value;
+                draft.today[name] = value;
+              })
+            );
+          }
+        }
+
+        // hh:
+        if (value.length === 3 && /:/.test(value[2])) {
+          setData(
+            produce((draft) => {
+              draft.day[currentMonthName][currentDayNumber][name] = value;
+              draft.today[name] = value;
+            })
+          );
+        }
+
+        // hh:m
+        if (value.length === 4 && /[0-5]/.test(value[3])) {
+          setData(
+            produce((draft) => {
+              draft.day[currentMonthName][currentDayNumber][name] = value;
+              draft.today[name] = value;
+            })
+          );
+        }
+
+        // hh:mm
+        if (value.length === 5 && /[0-9]/.test(value[4])) {
+          const simData = Object.assign({}, data.today, {
+            totalHrs: {
+              hours: todayTotal.hours,
+              minutes: todayTotal.minutes,
+            },
+          });
+          const simTodayTotal = getTotalHrsMinutes(simData, name, value);
+
+          // (minutes in a day: 1440 (24*60) )
+          const isLessThanMaxTimePerDay =
+            simTodayTotal.hours * 60 + simTodayTotal.minutes <= 1439;
+
+          if (isLessThanMaxTimePerDay) {
+            setData(
+              produce((draft) => {
+                draft.day[currentMonthName][currentDayNumber][name] = value;
+                draft.today[name] = value;
+
+                draft.day[currentMonthName][currentDayNumber].totalHrs = {
+                  hours: todayTotal.hours,
+                  minutes: todayTotal.minutes,
+                };
+                draft.today.totalHrs = {
+                  hours: todayTotal.hours,
+                  minutes: todayTotal.minutes,
+                };
+                draft.year[currentMonthNumber].days[currentDayIndex].totalTime =
+                  dayTotalTime;
+                draft.year[currentMonthNumber].totalTime = monthTotalTime;
+              })
+            );
+          } else {
+            //what to do , alert and reset to zero? block everything ? setdata error true?
+          }
+        }
+      }
     },
     [data, currentMonthNumber]
   );
