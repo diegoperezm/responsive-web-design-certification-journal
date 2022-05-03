@@ -91,18 +91,18 @@ describe("getMonthNumberFromName", () => {
 });
 
 describe("getDaysInMonth", () => {
-  let January = getDaysInMonth("2022", 0);
-  let February = getDaysInMonth("2022", 1);
-  let March = getDaysInMonth("2022", 2);
-  let April = getDaysInMonth("2022", 3);
-  let May = getDaysInMonth("2022", 4);
-  let June = getDaysInMonth("2022", 5);
-  let July = getDaysInMonth("2022", 6);
-  let August = getDaysInMonth("2022", 7);
-  let September = getDaysInMonth("2022", 8);
-  let October = getDaysInMonth("2022", 9);
-  let November = getDaysInMonth("2022", 10);
-  let December = getDaysInMonth("2022", 11);
+  const January = getDaysInMonth("2022", 0);
+  const February = getDaysInMonth("2022", 1);
+  const March = getDaysInMonth("2022", 2);
+  const April = getDaysInMonth("2022", 3);
+  const May = getDaysInMonth("2022", 4);
+  const June = getDaysInMonth("2022", 5);
+  const July = getDaysInMonth("2022", 6);
+  const August = getDaysInMonth("2022", 7);
+  const September = getDaysInMonth("2022", 8);
+  const October = getDaysInMonth("2022", 9);
+  const November = getDaysInMonth("2022", 10);
+  const December = getDaysInMonth("2022", 11);
 
   it("January  , 2022: should have 31 days", () => {
     expect(January).toBe(31);
@@ -183,7 +183,7 @@ describe("getOffsetMonth", () => {
 
 describe("getMonthData", () => {
   const currentMonthNumber = getMonthNumberFromName("February");
-  let data = getInitialData(rwdc2021, currentMonthNumber);
+  const data = getInitialData(rwdc2021, currentMonthNumber);
 
   it("January should return an array with the length of 37: 31 days plus 6 offset  ", () => {
     expect(getMonthData("January", data.year[0].days).length).toEqual(37);

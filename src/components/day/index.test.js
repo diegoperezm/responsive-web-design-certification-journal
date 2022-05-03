@@ -34,25 +34,29 @@ describe("Component: Day", () => {
     },
   };
 
-	test("renders Day component: Sunday, January 17", () => {
+  test("renders Day component: Sunday, January 17", () => {
     render(
       <MemoryRouter initialEntries={[{ pathname: "/day/January/17" }]}>
         <Day dataDay={data.day} />
       </MemoryRouter>
     );
 
-    //screen.debug();
-    //screen.getByRole("");
-    //screen.debug(screen.getByText(/17/));
-
     expect(
       screen.getByRole("heading", { level: 2, name: "Sunday, January 17" })
     ).toBeInTheDocument();
 
-    expect(screen.getByRole("heading", { level: 3, name: "Comments:" })).toBeInTheDocument();
-    expect(screen.getByRole("row", { name: "Start End Project" })).toBeInTheDocument();
-    expect(screen.getByRole("row", { name: "1:00 2:00 Tribute Page" })).toBeInTheDocument();
-    expect(screen.getByRole("row", { name: "3:00 4:00 Product Landing Page" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { level: 3, name: "Comments:" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("row", { name: "Start End Project" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("row", { name: "1:00 2:00 Tribute Page" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("row", { name: "3:00 4:00 Product Landing Page" })
+    ).toBeInTheDocument();
     expect(
       screen.getByRole("row", {
         name: "5:00 6:00 Technical Documentation Page",
@@ -61,25 +65,41 @@ describe("Component: Day", () => {
     expect(
       screen.getByRole("row", { name: "7:00 8:00 Personal Portfolio Webpage" })
     ).toBeInTheDocument();
-    expect(screen.getByRole("columnheader", { name: "Start" })).toBeInTheDocument()	;
-    expect(screen.getByRole("columnheader", { name: "End" })).toBeInTheDocument()	;
-    expect(screen.getByRole("columnheader", { name: "Project" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("columnheader", { name: "Start" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("columnheader", { name: "End" })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("columnheader", { name: "Project" })
+    ).toBeInTheDocument();
     expect(screen.getByRole("cell", { name: "1:00" })).toBeInTheDocument();
     expect(screen.getByRole("cell", { name: "2:00" })).toBeInTheDocument();
-    expect(screen.getByRole("cell", { name: "Tribute Page" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("cell", { name: "Tribute Page" })
+    ).toBeInTheDocument();
     expect(screen.getByRole("cell", { name: "3:00" })).toBeInTheDocument();
     expect(screen.getByRole("cell", { name: "4:00" })).toBeInTheDocument();
-    expect(screen.getByRole("cell", { name: "Product Landing Page" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("cell", { name: "Product Landing Page" })
+    ).toBeInTheDocument();
     expect(screen.getByRole("cell", { name: "5:00" })).toBeInTheDocument();
     expect(screen.getByRole("cell", { name: "6:00" })).toBeInTheDocument();
-    expect(screen.getByRole("cell", { name: "Technical Documentation Page" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("cell", { name: "Technical Documentation Page" })
+    ).toBeInTheDocument();
     expect(screen.getByRole("cell", { name: "7:00" })).toBeInTheDocument();
     expect(screen.getByRole("cell", { name: "8:00" })).toBeInTheDocument();
-    expect(screen.getByRole("cell", { name: "Personal Portfolio Webpage" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("cell", { name: "Personal Portfolio Webpage" })
+    ).toBeInTheDocument();
 
-		expect(screen.getByText(/Total/)).toBeInTheDocument();
-		expect(screen.getByText(/4 hours/)).toBeInTheDocument();
-		expect(screen.getByText(/0 minutes/)).toBeInTheDocument();
-		expect(screen.getByText( "Testing multiple days. Previous data.")).toBeInTheDocument();
+    expect(screen.getByText(/Total/)).toBeInTheDocument();
+    expect(screen.getByText(/4 hours/)).toBeInTheDocument();
+    expect(screen.getByText(/0 minutes/)).toBeInTheDocument();
+    expect(
+      screen.getByText("Testing multiple days. Previous data.")
+    ).toBeInTheDocument();
   });
 });

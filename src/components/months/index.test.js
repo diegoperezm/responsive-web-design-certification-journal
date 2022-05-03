@@ -65,9 +65,6 @@ describe("Component: Month", () => {
       </MemoryRouter>
     );
 
-    //screen.debug();
-    //screen.getByRole("");
-
     expect(
       screen.getByRole("heading", { level: 2, name: "March" })
     ).toBeInTheDocument();
